@@ -1,44 +1,37 @@
-document.getElementById('randomName').addEventListener('click', Random)
+let indexNick = ["Crusher", "Jester", "Madman", "Hacker", "Destroyer"];
+
+
+document.getElementById('randomName').addEventListener('click', Random);
+document.getElementById('allNickName').addEventListener('click', Allname);
 
 function Random() {
-    let firstName = document.getElementById('first').nodeValue;
-    let lastName = document.getElementById('last').nodeValue;
-    let Nickname = document.getElementById('Nick').nodeValue;
+    console.log('Random Nickname');
+    let firstName = document.getElementById('first').value;
+    let lastName = document.getElementById('last').value;
 
-    let ChooseNick = firstName + Nickname + lastName
 
-    document.getElementById('output').innerHTML = ChooseNick;
+    let randoNick = firstName  + " " + indexNick[3] + " " + lastName;
+ 
+    document.getElementById('output').innerHTML = randoNick;
+
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-function randomName() {
-    let randNum = Math.random();
+// Event Functions
 
-    if (randNum < 0.66) {
-        console.log('Nickcrusher')
-        
-        document.getElementById('Nickcrusher').innerHTML;
-        document.getElementById('output').innerHTML;
+function Allname() {
+    console.log("All Nicknames");
     
-    } else if (randNum < 0.33) {
-        console.log('Nickcoder')
-        
-        document.getElementById('Nickcoder').innerHTML;
-        document.getElementById('output').innerHTML;
-    
-    } else {
-        console.log('Nickninja')
-    
-        document.getElementById('Nickninja').innerHTML;
-        document.getElementById('output').innerHTML;
-    }
 }
 
+function randoNick(first, last) {
 
-//////////////////////////////////////////////////////////////////////////////////////////
-
-function randomName () {
-    
-
+    if (event.code == Random) {
+        for (let i = first; last < MimeTypeArray.length; i++) {
+            myArray[i] += Math.random(indexNick);
+        }
+    } else if (event.code == Allname) {
+        indexNick == 0, 1, 2, 3, 4 
+    }
 }
