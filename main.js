@@ -1,4 +1,4 @@
-let indexNick = ["Crusher", "Jester", "Madman", "Hacker", "Destroyer", "Dark Lord"];
+let indexNick = ["Crusher", "Jester", "Madman", "Hacker", "Destroyer", "Dark Lord", "Lack"];
 
 
 document.getElementById('randomName').addEventListener('click', Random);
@@ -18,47 +18,19 @@ function Random() {
 
 function Allname() {
     console.log("All Nicknames");
-    
-    // Get Inputs
 
+    // Clear output element
+    document.getElementById("output").innerHTML = "";
+
+    // Get Inputs
     let firstName = document.getElementById('first').value;
     let lastName = document.getElementById('last').value;
-    
+
     // Loop through nickname array to print all possible nicknames (First + _____ + Last)
     for (let i = 0; i < indexNick.length; i++) {
-        console.log(firstName + " " + indexNick + " " + lastName);
-
-        document.getElementById('output').innerHTML += firstName + " " +     indexNick           + " " + lastName; // use += to add to the HTML
-
+        document.getElementById('output').innerHTML += firstName + " " + indexNick[i] + " " + lastName + "<br>"; // use += to add to the HTML
     }
 }
-/////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-// Event Functions
-
-function Nickname() {
-    let selection = document.getElementById('menu').value;
-
-    if (selection == 'randomName') {
-
-        randomIndex = randomInt(0, Random.length);
-        console.log(randomIndex);
-        grades[randomIndex]= randoNick;
-        
-
-
-
-
-    } else if (selection == 'AllNickName') {
-
-        for (let i = 0; i < grades.length; i++) {
-            indexNick[indexNick.length - 1];
-        }
- 
-    }
-}
-
-
 
 
 
