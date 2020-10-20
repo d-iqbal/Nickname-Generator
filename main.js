@@ -1,4 +1,4 @@
-let indexNick = ["Crusher", "Jester", "Madman", "Hacker", "Destroyer"];
+let indexNick = ["Crusher", "Jester", "Madman", "Hacker", "Destroyer", "Dark Lord"];
 
 
 document.getElementById('randomName').addEventListener('click', Random);
@@ -9,29 +9,60 @@ function Random() {
     let firstName = document.getElementById('first').value;
     let lastName = document.getElementById('last').value;
 
-
-    let randoNick = firstName  + " " + indexNick[3] + " " + lastName;
+    let randomIndex = Math.randomInt(0, indexNick.length);
+    let randoNick = firstName  + " " + indexNick[randomIndex] + " " + lastName;
  
     document.getElementById('output').innerHTML = randoNick;
 
 }
 
+function Allname() {
+    console.log("All Nicknames");
+    
+    // Get Inputs
+
+    let firstName = document.getElementById('first').value;
+    let lastName = document.getElementById('last').value;
+    
+    // Loop through nickname array to print all possible nicknames (First + _____ + Last)
+    for (let i = 0; i < indexNick.length; i++) {
+        console.log(firstName + " " + indexNick + " " + lastName);
+
+        document.getElementById('output').innerHTML += firstName + " " +     indexNick           + " " + lastName; // use += to add to the HTML
+
+    }
+}
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // Event Functions
 
-function Allname() {
-    console.log("All Nicknames");
-    
-}
+function Nickname() {
+    let selection = document.getElementById('menu').value;
 
-function randoNick(first, last) {
+    if (selection == 'randomName') {
 
-    if (event.code == Random) {
-        for (let i = first; last < MimeTypeArray.length; i++) {
-            myArray[i] += Math.random(indexNick);
+        randomIndex = randomInt(0, Random.length);
+        console.log(randomIndex);
+        grades[randomIndex]= randoNick;
+        
+
+
+
+
+    } else if (selection == 'AllNickName') {
+
+        for (let i = 0; i < grades.length; i++) {
+            indexNick[indexNick.length - 1];
         }
-    } else if (event.code == Allname) {
-        indexNick == 0, 1, 2, 3, 4 
+ 
     }
 }
+
+
+
+
+
+
+
+
+
